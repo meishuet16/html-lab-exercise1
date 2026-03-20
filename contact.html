@@ -10,7 +10,7 @@
 <!--Apply the inline style attribute to at least 5 different elements to demonstrate: color, background color, font-size, border, and padding -->
 <body style="font-family: Arial; background-color: #f9f9f9;">
 	<header>
-		<h1 style="border:2px black; padding: 15px;color:#D5DFEB;font-size:40px; background-color: #3966A2;text-align: center;">Contact Me</h1>
+		<h1 style="border:2px solid black; padding: 15px;color:#D5DFEB;font-size:40px; background-color: #3966A2;text-align: center;">Contact Me</h1>
 	</header>
 	
 	<main>
@@ -61,7 +61,7 @@
 
 					<!--Textarea Message-->
 					<label for="message">Message to leave:</label><br>
-					<textarea id="message"name="message"rows="5"cols="40"style="border: 2px solid navy padding: 6px;font-size: 14px;"
+					<textarea id="message"name="message"rows="5"cols="40"style="border: 2px solid navy;padding: 6px;font-size: 14px;"
 						placeholder="Leave your message here..."required>
 					</textarea><br><br>
 				</fieldset>
@@ -100,38 +100,37 @@
 
 					<p style="color:darkblue;">Choose your preffered contact methods:</p>
 					<label for="contactEmail">Email</label>
-					<input type="checkbox" id="contactEmail"name="contactMethod"><br>
+					<input type="checkbox" id="contactEmail"name="contactMethod"value="contactEmail"><br>
 
 					<label for="contactPhone">Phone Call</label>
-					<input type="checkbox" id="contactPhone"name="contactMethod"><br>
+					<input type="checkbox" id="contactPhone"name="contactMethod"value="contactPhone"><br>
 
 					<label for="contactWhatsapp">Whatsapp Message</label>
-					<input type="checkbox" id="contactWhatsapp"name="contactMethod"><br><br>
+					<input type="checkbox" id="contactWhatsapp"name="contactMethod"value="contactWhatsapp"><br><br>
 
 				<!--Radio button,can choose onli 1-->
 				<p style="color:darkblue;">Choose your preffered contact time:</p>
 				<label for="morning">Morning</label>
-				<input type="radio" id="morning"name="contactTime"><br>
+				<input type="radio" id="morning"name="contactTime"value="morning"><br>
 
 				<label for="afternoon">Afternoon</label>
-				<input type="radio" id="afternoon"name="contactTime"><br>
+				<input type="radio" id="afternoon"name="contactTime"value="afternoon"><br>
 
 				<label for="evening">Evening</label>
-				<input type="radio" id="evening"name="contactTime"><br>
+				<input type="radio" id="evening"name="contactTime"value="evening"><br>
 
 				</fieldset>
 
-    		<!--Submit button-->
-    		<button type="submit" style="background-color:navy;color:white; padding:10px; font-size:16px; border:none;">Submit Message</button>
-
-
-
-					
-
-				
+				<!--Submit Button-->
+				<button type="submit"
+				style ="border:none; padding: 10px;color:#D5DFEB;font-size:20px; background-color: #3966A2;text-align: center;" >Submit Form</button>
 
 			</form>
 		</section>
 	</main>
+
+	<footer>
+		<small>&copy; 2026 Meishuet's Portfolio. All rights reserved.</small>
+	</footer>
 </body>
 </html>
