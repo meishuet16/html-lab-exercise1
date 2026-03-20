@@ -3,9 +3,73 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--TASK 5:Add a profile photo and a project screenshot to the page using correct, accessible HTML markup.-->
 	<title>Projects</title>
 </head>
 <body>
+	<header>
+		<h1>My Projects</h1>
+	</header>
+
+	<main>
+		<!-- Use <figure> and <figcaption> to wrap each image with a descriptive caption -->
+		<!--Every <img> must have a meaningful alt attribute — describe what is shown, not just the filename – Set width and height attributes on all images -->
+		<!--Use the title attribute on one image to provide tooltip text on hover-->
+		<figure>
+			<!--Profile Photo-->
+			<figcaption>This is Meishuet's Profile Photo</figcaption>
+
+			<!--Use <a> so that click the url can open it-->
+		 	<a href="https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo318g97ggs3u5g5nqgg6h095u0il4p5p8?imageView2/2/w/540/format/webp|imageMogr2/strip2">
+			<img src="https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo318g97ggs3u5g5nqgg6h095u0il4p5p8?imageView2/2/w/540/format/webp|imageMogr2/strip2"
+		 	alt="This is a profile pic of meishuet that is showing her back"
+		 	width="200" height="200" title="This is Meishuet"></a>
+
+		</figure>
+
+
+		<!--PROJECT SCREENSHOT-->
+		<h2><mark>Campus Sfety App(UTMBright)</mark></h2>
+		<figure>
+			<a href="images/utmbright1.png">
+				<img src="images/utmbright1.png"
+				alt="This is a screenshot of UTMBRIGHT project interface."
+				width="600"
+				height="900"
+				title="Homepage of UTMBright"></a>
+				<figcaption>This is a screenshot of UTMBRIGHT project interface. </figcaption>
+		</figure>
+
+
+		<!-- Add one image inside an <a> tag so that clicking the image opens a URL ->
+		<! --Use the align attribute (deprecated — note this in an HTML comment) to float one image beside a paragraph of text -->
+			<!--FLOATED IMAGE BESIDE A PARAGRAPH-->
+			<figure>
+				<a href="images/utmbright2.png">
+					<img src="images/utmbright2.png"
+					alt="This is an icon representing UTMBright"
+					width="150"
+					height="150"
+					title="UTMBright Homepage"
+					align="right"></a>
+					
+			</figure>
+			<p>Coding has always been my passion.
+		 	  	I started with small projects and gradually moved to larger applications.<br>
+		 	  	I was awarded the Champion of CodeNection 2025, where I demonstrated advanced problem-solving skills and technical agility under pressure.<br>
+		 	  	<strong>JustBrightForUTM</strong> is a <strong>Smart Campus Mobility & Safety Companion</strong> built to empower students with confidence and protection on campus. Our mission is to eliminate the fear of walking alone, provide instant emergency response, and foster a community-driven safety ecosystem.This image is floated beside the text using the deprecated align attribute.<br>
+		 	  	<strong>The app delivers its value through three main pillars:</strong></p>
+		 	  	<ul>
+		 	  		<li><b>Intelligent Navigation & Community Mobility</b></li>
+		 	  		<li><b>The Ultimate SOS Button</b></li>
+		 	  		<li><b>Community Safety Ecosystem</b></li>
+		 	  		<li><b>Duress PIN</b></li>
+		 	  		<li><b>Hotlines & Resources Hub</b></li>
+		 	  	</ul>
+
+
+
+	</main>
 	
 </body>
 </html>
