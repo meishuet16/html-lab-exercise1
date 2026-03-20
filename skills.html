@@ -13,18 +13,33 @@
 	<!--Create the <nav> using a <ul> of anchor links (<a href="#section-id">) that jump to named sections on the same page -->
 		<nav>
 			<ul>
-				<li><a href=""></a></li>
-				<li><a href=""></a></li>
-				<li><a href=""></a></li>
+				<li><a href="#topSkills">Top Skills</a></li>
+				<li><a href="#technologies">Technologies I Use</a></li>
+				<li><a href="glossaries">Glossary</a></li>
 			</ul>
 		</nav>
 
 		<main>
 			<!-- Build a 'Top Skills' section using an <ol> with the type attribute set to Roman numerals (type="I") and a custom start value-->
-			<!--Use the reversed attribute on one ordered list to count down-->
-			<section>
+			<section id="topSkills">
+				<h2>Top Skills</h2>
+				<ol type="I"start="1">
+					<li>Problem Solving
+						<!--Use the reversed attribute on one ordered list to count down-->
+						<ol type="I"start="5" reversed>
+							<li>Implement and Mpnitor the Solutions</li>
+							<li>Analyze the Possible Solution</li>
+							<li>Come Up with Potential Solution</li>
+							<li>Breakdown the Problem</li>
+							<li>Define the Problem</li>
+						</ol>
+					</li>
+		 			<li>Team Collaboration</li>
+		 			<li>Critical Thinking</li>
+				</ol>
 
 			</section>
+			<h2>Technologies I Use</h2>
 
 			<!--Create a 'Technologies I Use' <ul> with a nested <ul> inside at least one list item (e.g. JavaScript > ES6, Node.js, React) -->
 			<section>
