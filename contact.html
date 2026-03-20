@@ -70,8 +70,26 @@
 				<!--Subject fieldset-->
 				<fieldset style="border: 2px solid navy;padding: 15px;background-color:#fff ;">
 					<legend style="font-size: 20px; color: #3966A2;">Main Purpose to Contact</legend>
-					<!--Subject Dropdown, use <select> to show dropdown-->
-						
+					<!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown -->
+					<label for="subject">Subject:</label><br>
+					<select id="subject"name="subject">
+						<optgroup label="General">
+							<option value="feedback">Feedback</option>
+							<option value="question">Question</option>
+						</optgroup>
+
+						<optgroup label="Opportunities">
+							<option value="sponsor">Sponsorship</option>
+							<option value="hackathon">Hackathon Teammates</option>
+							<option value="job">Job & Collaboration</option>
+						</optgroup>
+
+						<optgroup label="Others">
+							<option value="others">Others</option>
+						</optgroup>
+
+					</select>
+
 
 
 					
