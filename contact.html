@@ -10,15 +10,72 @@
 <!--Apply the inline style attribute to at least 5 different elements to demonstrate: color, background color, font-size, border, and padding -->
 <body style="font-family: Arial; background-color: #f9f9f9;">
 	<header>
-		<h1 style="color:#D5DFEB;font-family: Arial;font-size:40px; background-color: #3966A2;text-align: center;">Contact Me</h1>
+		<h1 style="border:2px black; padding: 15px;color:#D5DFEB;font-size:40px; background-color: #3966A2;text-align: center;">Contact Me</h1>
 	</header>
 	
 	<main>
 		<section>
 			<!--Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping -->
 			<form action="#" method="post">
-				<fieldset>
+				<fieldset style="border: 2px solid navy;padding: 15px;background-color:#fff ;">
+
+					<legend style="font-size: 20px; color: #3966A2;">Get In Touch</legend>
+
+					 <!--Every input must have a linked <label for="..."> — no placeholder-only labelling -->
+					 <!-- Include these input types: text, email, tel, number, date, range, and textarea-->
+
+					<!--Name-->
+					<label for="fullname">Full Name:</label><br>
+					<input type="text" id="fullname" name="fullname" 
+					style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+					placeholder="Your full name" required maxlength="60"> <br><br>
+
+					<!--Email-->
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email" 
+					style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+					placeholder="example@email.com" required maxlength="60"> <br><br>
+
+					<!--Phone-->
+					<label for="phone">Phone Number:</label><br>
+					<input type="tel" id="phone" name="phone" 
+					style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+					placeholder="012-3456789" required maxlength="12"> <br><br>
+
+					<!--Age-->
+					<label for="age">Your Age:</label><br>
+					<input type="number" id="age" name="age" 
+					style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+					required min="18" max="99"> <br><br>
+
+					<!--Prefered Contact Date-->
+					<label for="contactDate">Prefered Contact Date:</label><br>
+					<input type="date" id="contactDate" name="contactDate" 
+					style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+					required> <br><br>
+
+					<!--Urgency Level-->
+					<label for="urgency">Urgency Level (1-5):</label><br>
+					<input type="range" id="urgency" name="urgency" 
+					required min="0" max="5"> <br><br>
+
+					<!--Textarea Message-->
+					<label for="message">Message to leave:</label><br>
+					<textarea id="message"name="message"rows="5"cols="40"style="border: 2px solid navy padding: 6px;font-size: 14px;"
+						placeholder="Leave your message here..."required>
+					</textarea><br><br>
+				</fieldset>
+
+
+				<!--Subject fieldset-->
+				<fieldset style="border: 2px solid navy;padding: 15px;background-color:#fff ;">
+					<legend style="font-size: 20px; color: #3966A2;">Main Purpose to Contact</legend>
+					<!--Subject Dropdown, use <select> to show dropdown-->
+						
+
+
 					
+
 				</fieldset>
 
 			</form>
