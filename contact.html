@@ -89,12 +89,46 @@
 						</optgroup>
 
 					</select>
+				</fieldset>
+
+
+				<!--Prefered Contact Time & Method Fieldset-->
+				<!--Add at least 3 checkboxes and 3 radio buttons with correct matching name attribute grouping-->
+				<!--Checkboxes,can choose more than 1-->
+				<fieldset style="border: 2px solid navy;padding: 15px;background-color:#fff ;">
+					<legend style="font-size: 20px; color: #3966A2;">Prefered Contact Time & Method</legend>
+
+					<p style="color:darkblue;">Choose your preffered contact methods:</p>
+					<label for="contactEmail">Email</label>
+					<input type="checkbox" id="contactEmail"name="contactMethod"><br>
+
+					<label for="contactPhone">Phone Call</label>
+					<input type="checkbox" id="contactPhone"name="contactMethod"><br>
+
+					<label for="contactWhatsapp">Whatsapp Message</label>
+					<input type="checkbox" id="contactWhatsapp"name="contactMethod"><br><br>
+
+				<!--Radio button,can choose onli 1-->
+				<p style="color:darkblue;">Choose your preffered contact time:</p>
+				<label for="morning">Morning</label>
+				<input type="radio" id="morning"name="contactTime"><br>
+
+				<label for="afternoon">Afternoon</label>
+				<input type="radio" id="afternoon"name="contactTime"><br>
+
+				<label for="evening">Evening</label>
+				<input type="radio" id="evening"name="contactTime"><br>
+
+				</fieldset>
+
+    		<!--Submit button-->
+    		<button type="submit" style="background-color:navy;color:white; padding:10px; font-size:16px; border:none;">Submit Message</button>
 
 
 
 					
 
-				</fieldset>
+				
 
 			</form>
 		</section>
