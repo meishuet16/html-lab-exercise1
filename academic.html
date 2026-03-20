@@ -16,9 +16,13 @@
 		<section>
 			<h2>Year 2 Academic Result</h2>
 			<table border="1" cellpadding="8" cellspacing="0"> 
+
+			<!--Add a <caption> element describing the table content (positioned above the table)-->
 			<caption>Year 2 Academic Results</caption> 
 			<thead> 
 				<tr> 
+					<!--Use <th scope="col"> for column headers and <th scope="row"> for row headers -->
+					<!-- Demonstrate colspan and rowspan — e.g. a merged "Semester 1 & 2" header spanning multiple columns-->
 					<th scope="col" colspan="2">Semester 1 &amp; 2</th> 
 					<th scope="col">Credits</th> 
 					<th scope="col">Grade</th> 
@@ -26,11 +30,52 @@
 			</thead>
 
 			<tbody>
+				<tr>
+					<th scope="row">SCSE2123</th>
+					<td>Software Requirement Engineering</td>
+					<td>3</td>
+					<td>A</td>
+				</tr>
+
+				<tr>
+					<th scope="row">SCSE2103</th>
+					<td>>Data Structure and Algorithnm</td>
+					<td>3</td>
+					<td>A+</td>
+				</tr>
+
+				<tr>
+					<th scope="row">SCSE2113</th>
+					<td>Human Computer Interaction</td>
+					<td>3</td>
+					<td>A+</td>
+				</tr>
+
+				<tr>
+					<th scope="row">SCSE2133</th>
+					<td>Software Process and Project Management</td>
+					<td>3</td>
+					<td>A+</td>
+				</tr>
+
+				<tr>
+					<th scope="row">SCSR2043</th>
+					<td>Operating System</td>
+					<td>3</td>
+					<td>A</td>
+				</tr>
+
+				<tr>
+					<th scope="row">ULRF2782</th>
+					<td>Trekking</td>
+					<td>2</td>
+					<td>A</td>
+				</tr>
 				
 			</tbody>
 
 			<tfoot>
-				<tr><td colspan="2">Total</td><td><strong>120</strong></td></tr> 
+				<tr><td colspan="2">Total</td><td><strong>17</strong></td></tr> 
 			</tfoot>
 
 			</table>
