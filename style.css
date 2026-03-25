@@ -86,3 +86,26 @@ small {
     line-height: 1.4;
     color: var(--color-muted);
 }
+
+/*Style the <header>, <nav>, <main>, and <footer> landmarks with distinct background-color, padding, 
+and color — all values via CSS variables*/
+header{
+    background-color: var(--color-primary);
+    padding: var(--color-surface);
+    color: var(--space-md);
+}
+nav{
+    background-color: var(--color-secondary);
+    padding: var(--color-surface);
+    color: var(--space-sm);
+}
+main{
+    background-color: var(--color-surface);
+    padding: var(--color-surface);
+    color: var(--space-lg);
+}
+footer{
+    background-color: var(--color-grey2);
+    padding: var(--color-surface);
+    color: var(--space-md);
+}
