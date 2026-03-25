@@ -14,7 +14,7 @@
 	</header>
 	
 	<main>
-		<section>
+		<div>
 			<!--Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping -->
 			<form action="#" method="post">
 				<fieldset style="border: 2px solid navy;padding: 15px;background-color:#fff ;">
@@ -57,12 +57,12 @@
 					<!--Urgency Level-->
 					<label for="urgency">Urgency Level (1-5):</label><br>
 					<input type="range" id="urgency" name="urgency" 
-					required min="0" max="5"> <br><br>
+					min="0" max="5"> <br><br>
 
 					<!--Textarea Message-->
 					<label for="message">Message to leave:</label><br>
-					<textarea id="message"name="message"rows="5"cols="40"style="border: 2px solid navy;padding: 6px;font-size: 14px;"
-						placeholder="Leave your message here..."required>
+					<textarea id="message" name="message" rows="5" cols="40" style="border: 2px solid navy;padding: 6px;font-size: 14px;"
+						placeholder="Leave your message here..." required>
 					</textarea><br><br>
 				</fieldset>
 
@@ -72,7 +72,7 @@
 					<legend style="font-size: 20px; color: #3966A2;">Main Purpose to Contact</legend>
 					<!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown -->
 					<label for="subject">Subject:</label><br>
-					<select id="subject"name="subject">
+					<select id="subject" name="subject">
 						<optgroup label="General">
 							<option value="feedback">Feedback</option>
 							<option value="question">Question</option>
@@ -100,24 +100,24 @@
 
 					<p style="color:darkblue;">Choose your preffered contact methods:</p>
 					<label for="contactEmail">Email</label>
-					<input type="checkbox" id="contactEmail"name="contactMethod"value="contactEmail"><br>
+					<input type="checkbox" id="contactEmail" name="contactMethod" value="contactEmail"><br>
 
 					<label for="contactPhone">Phone Call</label>
-					<input type="checkbox" id="contactPhone"name="contactMethod"value="contactPhone"><br>
+					<input type="checkbox" id="contactPhone" name="contactMethod" value="contactPhone"><br>
 
 					<label for="contactWhatsapp">Whatsapp Message</label>
-					<input type="checkbox" id="contactWhatsapp"name="contactMethod"value="contactWhatsapp"><br><br>
+					<input type="checkbox" id="contactWhatsapp" name="contactMethod" value="contactWhatsapp"><br><br>
 
 				<!--Radio button,can choose onli 1-->
 				<p style="color:darkblue;">Choose your preffered contact time:</p>
 				<label for="morning">Morning</label>
-				<input type="radio" id="morning"name="contactTime"value="morning"><br>
+				<input type="radio" id="morning" name="contactTime" value="morning"><br>
 
 				<label for="afternoon">Afternoon</label>
-				<input type="radio" id="afternoon"name="contactTime"value="afternoon"><br>
+				<input type="radio" id="afternoon" name="contactTime" value="afternoon"><br>
 
 				<label for="evening">Evening</label>
-				<input type="radio" id="evening"name="contactTime"value="evening"><br>
+				<input type="radio" id="evening" name="contactTime" value="evening"><br>
 
 				</fieldset>
 
@@ -126,7 +126,7 @@
 				style ="border:none; padding: 10px;color:#D5DFEB;font-size:20px; background-color: #3966A2;text-align: center;" >Submit Form</button>
 
 			</form>
-		</section>
+		</div>
 	</main>
 
 	<footer>
