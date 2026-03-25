@@ -1,0 +1,19 @@
+/* ============================================ 
+BREAKPOINTS 
+mobile-first base: 320px and up (default) 
+tablet:   @media (min-width: 600px) 
+desktop:  @media (min-width: 1024px) 
+============================================ */ 
+
+/* --- Base styles (mobile) --- */ 
+.card-grid { 
+display: grid; 
+grid-template-columns: 1fr; 
+gap: var(--space-md); 
+} 
+@media (min-width: 600px) { 
+.card-grid { grid-template-columns: repeat(2, 1fr); } 
+} 
+@media (min-width: 1024px) { 
+.card-grid { grid-template-columns: repeat(3, 1fr); } 
+}
