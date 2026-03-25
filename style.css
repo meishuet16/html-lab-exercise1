@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
 /* ============================================ 
 BREAKPOINTS 
 mobile-first base: 320px and up (default) 
@@ -5,15 +6,40 @@ tablet:   @media (min-width: 600px)
 desktop:  @media (min-width: 1024px) 
 ============================================ */ 
 
-/* --- Base styles (mobile) --- */ 
-.card-grid { 
-display: grid; 
-grid-template-columns: 1fr; 
-gap: var(--space-md); 
-} 
-@media (min-width: 600px) { 
-.card-grid { grid-template-columns: repeat(2, 1fr); } 
-} 
-@media (min-width: 1024px) { 
-.card-grid { grid-template-columns: repeat(3, 1fr); } 
+/*Task 1  CSS Architecture & Custom Properties 
+Set up an external stylesheet and define a design token system in :root*/
+/*Apply the :root variables throughout the stylesheet — no hard-coded hex values or bare px font sizes 
+anywhere else*/
+:root { 
+--color-primary:    #1a1a2e;
+--color-secondary:  #16213e; 
+--color-accent:     #e8d5b7; 
+--color-text:       #1a1a1a; 
+--color-muted:      #666666; 
+--color-surface:    #f5f4f0; 
+--font-body:        'Lora', Georgia, serif; 
+--font-heading:     'Playfair Display', serif; 
+--space-sm:         0.5rem; 
+--space-md:         1.5rem; 
+--space-lg:         3rem; 
+}
+
+/*Write a CSS reset block: at minimum box-sizing: border-box, remove default margin/padding on body, 
+and set a base font-size of 62.5% on html (makes 1rem = 10px for easy calculation) */
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.6rem; 
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
 }
