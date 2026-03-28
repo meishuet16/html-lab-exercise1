@@ -338,7 +338,7 @@ revert to a single column using grid-template-columns: 1fr */
     }
 }
 
-/*Desktop: @media(min-width: 1024px ),only execute when width>1024px
+/*Desktop: @media(min-width: 1024px ),only execute when width>1024px*/
 /* At desktop (1024px+): full 3-column card grid; sidebar layout activates; nav is fully horizontal */
 @media (min-width: 1024px){
 .card-grid {
