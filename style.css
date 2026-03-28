@@ -146,6 +146,9 @@ img{
     margin: var(--space-sm); /*margin used for keeps image from touching text*/
     padding: 0; /*padding used for usually not needed for images */
     border-radius: 8px;
+    /* Make images responsive: max-width: 100%; height: auto; on all <img> elements */
+    max-width: 100%; 
+    height: auto;
 }
 
 blockquote{
@@ -221,6 +224,8 @@ header .hero-image {
 /* Navigation links container */
 nav ul {
     display: flex; /*let links arranged horizontally(?*/
+    flex-direction: column;/*nav links collapse to a vertical stack;*/
+
     /* Use flex-wrap: wrap and gap on the nav link list so links wrap naturally on narrow screens without 
     needing a media query */
     flex-wrap: wrap; /*when phone screen size not enough/too narrow, autpmatically to 2nd line*/
@@ -273,28 +278,27 @@ nav a.active{  /*.active class adds a bottom border to highlight the current pag
 }
 
 
-/*Task 4:  Page Layout with CSS Grid
-Apply CSS Grid to create two different layouts on two different pages. Grid must be used for both a 
-responsive multi-column card arrangement and a main-content + sidebar two-column page structure.*/
+/*Task 4:  Page Layout with CSS Grid(Apply CSS Grid to create two different layouts on two different pages. Grid must be used for both a 
+responsive multi-column card arrangement and a main-content + sidebar two-column page structure.)
+&TASK 5: RESPONSIVE DESIGN WITH MEDIA QUERIES(Apply a mobile-first CSS strategy. Write base styles for small screens first, then use @media rules to 
+progressively enhance the layout for wider viewports. The portfolio must function correctly at 320px, 
+768px, and 1280px. )
+
+
+/*Adopt a mobile-first approach: base styles target 320px and up(default)*/
+/* At mobile: nav links collapse to a vertical stack; header becomes a single column; all Grid layouts 
+revert to a single column using grid-template-columns: 1fr */
 .card-grid{ /*for index.html*/
     display: grid;
-    /*On index.html: style the page-cards section as a CSS Grid using grid-template-columns: 
-    repeat(auto-fit, minmax(260px, 1fr)) — cards fill the row and wrap automatically */
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr; /*Mobile ver 1 column*/
     gap: var(--space-md);
     align-items: stretch;
     padding: var(--space-md);
 }
-.card:hover {
-/* Add a :hover transform (transform: translateY(-4px)) on cards with transition: transform 
-0.2s for a 'lift' effect */
-  transform: translateY(-4px);
-  transition: transform 0.2s; 
-}
 
 .card-grid > section {
     background-color: var(--color-surface);
-    padding: var(--space-md);
+    padding: var(--space-md);   
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
     transition: transform 0.2s, box-shadow 0.2s; 
@@ -313,14 +317,37 @@ responsive multi-column card arrangement and a main-content + sidebar two-column
 /*foe about.html/skills.html*/
 .sidebar-layout {
     display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
     padding: var(--space-md);
 }
 
-@media (min-width: 800px) {
-    .sidebar-layout {
-    /*On skills.html or about.html: create a two-column layout with a wider main content area and a 
-    narrower aside sidebar using grid-template-columns: 1fr 280px*/
+/*Tablet base style： enhancements at min-width: 600px */
+/*Only execute when width>600px*/
+/* At tablet (600px+): the card grid switches to 2 columns; the header becomes a two-column Flex row */
+@media (min-width: 600px) {
+    header {
+        flex-direction: row; 
+        text-align: left;
+    }
+    nav ul {
+        flex-direction: row; 
+    }
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/*Desktop: @media(min-width: 1024px ),only execute when width>1024px
+/* At desktop (1024px+): full 3-column card grid; sidebar layout activates; nav is fully horizontal */
+@media (min-width: 1024px){
+.card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+.sidebar-layout {
         grid-template-columns: 1fr 280px; 
         align-items: start;
     }
+}
+
+ 
