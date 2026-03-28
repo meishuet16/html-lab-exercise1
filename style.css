@@ -368,3 +368,67 @@ input, textarea, select {
     background-color: var(--color-bg);
     transition: box-shadow 0.2s, border-color 0.2s;
 }
+
+/*Add a visible :focus state to every interactive form element using box-shadow in your accent colour — 
+do not rely on browser default outlines alone */
+input:focus, textarea:focus, select:focus {
+    outline: none; 
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent); 
+}
+
+/* Style the submit button: background-color transition on :hover and transform: scale(0.97) on :active */
+button[type="submit"] {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    padding: var(--space-md);
+    transition: background-color 0.2s, transform 0.1s;
+    border-radius: 6px;
+    font-weight: bold;
+}
+button[type="submit"]:hover {
+    background-color: var(--color-accent2); 
+}
+button[type="submit"]:active {
+    transform: scale(0.97); 
+}
+
+/*Use the ::before or ::after pseudo-element on at least two elements — e.g. a decorative quote 
+mark on the blockquote (content: '"'), or a coloured left bar on section headings */
+section h2::after {
+    content: '......';
+    color: var(--color-accent);
+}
+
+blockquote::before {
+  content: "“"; /* Decorative quote mark */
+  color: var(--color-accent2);
+  font-size: 2rem;
+  font-family: var(--font-heading);
+  margin-right: var(--space-sm);
+}
+
+/* Use :nth-child or :nth-of-type to apply alternating row colours to the academic results table 
+(e.g. tbody tr:nth-child(even))*/
+tbody tr:nth-child(even) {
+    background-color: var(--color-grey2);
+}
+
+/* Use :first-child and :last-child to remove the top border of the first and bottom border of the 
+last item in at least one list */
+
+/*Technologies list*/
+#technologies > ul > li {
+    border-top: 1px solid var(--color-grey2);
+    border-bottom: 1px solid var(--color-grey2);
+    padding: var(--space-sm) 0;
+    margin-top: -1px; 
+}
+/* remove Top border */
+#technologies > ul > li:first-child {
+    border-top: none;
+}
+/* remove bottom border */
+#technologies > ul > li:last-child {
+    border-bottom: none;
+}
