@@ -182,6 +182,7 @@ nav{
     align-items: center;
     background-color: var(--color-primary);
     color: var(--color-surface);
+    /* Apply position: sticky; top: 0; to the nav with an appropriate z-index so it stays visible during scroll*/
     position: sticky; /*keep nav bar visible while scrollig*/
     top: 0;
     z-index: 100;
@@ -195,6 +196,56 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     text-align: center;
     gap: var(--space-sm);
+}
+
+/* Text block inside header */
+header .hero-text {
+  flex: 1; /* Take available space */
+  margin-right: var(--space-md); /* Margin: separates text from image */
+}
+
+/* Profile image placeholder */
+header .hero-image {
+  flex: 0 0 200px; /* Fixed width for image */
+  height: 200px;
+  background-color: var(--color-grey2);
+  border-radius: 50%; /* Circular placeholder */
+}
+
+/* Navigation links container */
+nav ul {
+    display: flex; /*let links arranged horizontally(?*/
+    /* Use flex-wrap: wrap and gap on the nav link list so links wrap naturally on narrow screens without 
+    needing a media query */
+    flex-wrap: wrap; /*when phone screen size not enough/too narrow, autpmatically to 2nd line*/
+    gap: var(--space-sm); /*space between links*/
+    list-style: none; /*remove black dot */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation links */
+nav a{
+    color: var(--color-surface);
+    font-weight: bold;
+    padding: var(--space-sm);
+    border-radius: 4px;
+    /*Apply a CSS transition on nav links: transition: color 0.2s, background-color 0.2s — hover must 
+    change both*/
+    transition: color 0.2s, background-color 0.2s; 
+}
+
+/*Add an .active class to the correct <a> tag on each page and style it distinctly (a coloured bottom 
+border works well) */
+nav a:hover{
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+}
+ 
+nav a.active{
+    border-bottom: 3px solid var(--color-accent);
 }
