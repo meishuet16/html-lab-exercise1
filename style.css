@@ -14,9 +14,12 @@ anywhere else*/
 --color-primary:    #1a1a2e;
 --color-secondary:  #16213e; 
 --color-accent:     #e8d5b7; 
+--color-accent2:    #d9b882;
 --color-text:       #1a1a1a; 
 --color-muted:      #666666; 
+--color-grey2:      #e0e0e0;
 --color-surface:    #f5f4f0; 
+--color-bg:         #ffffff;
 --font-body:        'Lora', Georgia, serif; 
 --font-heading:     'Playfair Display', serif; 
 --space-sm:         0.5rem; 
@@ -91,23 +94,23 @@ small {
 and color — all values via CSS variables*/
 header{
     background-color: var(--color-primary);
-    padding: var(--color-surface);
-    color: var(--space-md);
+    padding: var(--space-md);
+    color: var(--color-surface);
 }
 nav{
     background-color: var(--color-secondary);
-    padding: var(--color-surface);
-    color: var(--space-sm);
+    padding: var(--space-sm);
+    color: var(--color-surface);
 }
 main{
     background-color: var(--color-surface);
-    padding: var(--color-surface);
-    color: var(--space-lg);
+    padding: var(--space-lg);
+    color: var(--color-surface);
 }
 footer{
     background-color: var(--color-grey2);
-    padding: var(--color-surface);
-    color: var(--space-md);
+    padding: var(--space-md);
+    color: var(--color-surface);
 }
 
 
@@ -123,7 +126,7 @@ you used and why （padding xiang nei ji while margin wang wai tui）*/
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add box-shadow to at least one card or panel for depth*/
 }
 
-.button{
+button{
     margin: var(--space-sm); /*margin used for prevents buttons from sticking together*/
     padding: var(--space-md); /*padding used for enlarges clickable area around text*/
     background-color: var(--color-accent);
@@ -131,7 +134,7 @@ you used and why （padding xiang nei ji while margin wang wai tui）*/
     color: var(--color-primary);
 }
 
-.section{
+section{
     margin-bottom: var(--space-lg); /*margin used for separates sections vertically */
     padding: var(--space-lg); /*padding used for keeps content away from section edge*/
     background-color: var(--color-surface);
@@ -139,13 +142,13 @@ you used and why （padding xiang nei ji while margin wang wai tui）*/
     color: var(--color-primary);
 }
 
-.img{
+img{
     margin: var(--space-sm); /*margin used for keeps image from touching text*/
     padding: 0; /*padding used for usually not needed for images */
     border-radius: 8px;
 }
 
-.blockquote{
+blockquote{
     margin: var(--space-md); /*margin used for separates quote from surrounding text */
     padding: var(--space-sm); /*padding used for keeps text away from decorative border*/
     border-left: 4px solid var(--color-accent);
@@ -180,7 +183,7 @@ nav{
     display: flex; /*automatically queue up by line(row)?mcm put lego from upper to bottom*/
     justify-content: space-between; /* Logo left, links right */
     align-items: center;
-    background-color: var(--color-primary);
+    background-color: var(--color-accent2);
     color: var(--color-surface);
     /* Apply position: sticky; top: 0; to the nav with an appropriate z-index so it stays visible during scroll*/
     position: sticky; /*keep nav bar visible while scrollig*/
@@ -190,7 +193,7 @@ nav{
 
 }
 header {
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: var(--color-surface);
     padding: var(--space-lg);
     display: flex;
@@ -247,7 +250,77 @@ nav a:hover{
 }
  
 nav a.active{  /*.active class adds a bottom border to highlight the current page.*/
-    border-bottom: 3px solid var(--color-accent);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.sub-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    list-style: none;
+    margin: var(--space-md) 0;
+    padding: 0;
+}
+
+.sub-nav a {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+.sub-nav a:hover {
+    color: var(--color-accent);
 }
 
 
+/*Task 4:  Page Layout with CSS Grid
+Apply CSS Grid to create two different layouts on two different pages. Grid must be used for both a 
+responsive multi-column card arrangement and a main-content + sidebar two-column page structure.*/
+.card-grid{ /*for index.html*/
+    display: grid;
+    /*On index.html: style the page-cards section as a CSS Grid using grid-template-columns: 
+    repeat(auto-fit, minmax(260px, 1fr)) — cards fill the row and wrap automatically */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+    align-items: stretch;
+    padding: var(--space-md);
+}
+.card:hover {
+/* Add a :hover transform (transform: translateY(-4px)) on cards with transition: transform 
+0.2s for a 'lift' effect */
+  transform: translateY(-4px);
+  transition: transform 0.2s; 
+}
+
+.card-grid > section {
+    background-color: var(--color-surface);
+    padding: var(--space-md);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    height: 100%;
+}
+
+.card-grid > section:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
+}
+
+.span-2 {
+    grid-column: span 2; 
+}
+
+/*foe about.html/skills.html*/
+.sidebar-layout {
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+}
+
+@media (min-width: 800px) {
+    .sidebar-layout {
+    /*On skills.html or about.html: create a two-column layout with a wider main content area and a 
+    narrower aside sidebar using grid-template-columns: 1fr 280px*/
+        grid-template-columns: 1fr 280px; 
+        align-items: start;
+    }

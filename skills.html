@@ -3,22 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<title>My Skills</title>
 </head>
 <body>
 	<header>
-		<h1>My Skills</h1>
+		<div class="header-text">
+			<h1>My Skills</h1>
+		</div>
+		<img src="images/utm.jpg" alt="Profile Placeholder" width="500" height="250" class="header-img">
 	</header>
+
+	<nav>
+		<div class="site-logo">MeiShuet.</div>
+		<ul>
+			<li><a href="index.html">Home Page</a></li>
+			<li><a href="about.html">About Me</a></li>
+			<li><a href="skills.html" class="active">My Skills</a></li>
+			<li><a href="academic.html" >My Academic Record</a></li>
+			<li><a href="projects.html" >My Projects</a></li>
+			<li><a href="contact.html">My Contact</a></li>
+		</ul>
+	</nav>
 
 	<!--Create the <nav> using a <ul> of anchor links (<a href="#section-id">) that jump to named sections on the same page -->
 	<!--Use # for same page redirection,or it will be redirected to other page-->
-		<nav>
+		<div class="sub-nav">
 			<ul>
 				<li><a href="#topSkills">Top Skills</a></li>
 				<li><a href="#technologies">Technologies I Use</a></li>
 				<li><a href="#glossaries">Glossary</a></li>
 			</ul>
-		</nav>
+		</div>
 
 		<main>
 			<!-- Build a 'Top Skills' section using an <ol> with the type attribute set to Roman numerals (type="I") and a custom start value-->
