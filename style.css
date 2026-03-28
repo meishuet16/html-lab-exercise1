@@ -177,7 +177,7 @@ use justify-content: space-between */
 
 /*Nav bar*/
 nav{
-    display: flex;
+    display: flex; /*automatically queue up by line(row)?mcm put lego from upper to bottom*/
     justify-content: space-between; /* Logo left, links right */
     align-items: center;
     background-color: var(--color-primary);
@@ -196,7 +196,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /*mcm fighting de couple, staying away from each other,one went LHS,another went RHS*/
     text-align: center;
     gap: var(--space-sm);
 }
@@ -246,6 +246,8 @@ nav a:hover{
     background-color: var(--color-surface);
 }
  
-nav a.active{
+nav a.active{  /*.active class adds a bottom border to highlight the current page.*/
     border-bottom: 3px solid var(--color-accent);
 }
+
+
