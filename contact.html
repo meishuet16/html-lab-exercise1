@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Lee Mei Shuet's Personal Portfolio Website">
 	<link rel="stylesheet" href="style.css">
 	<!--Create a 'Contact Me' section with a fully marked-up form. Use the inline style attribute (not an external stylesheet) to apply basic visual presentation — practising HTML's built-in styling mechanism. -->
 	<title>Contact Me</title>
@@ -10,92 +11,133 @@
 
 <!--Apply the inline style attribute to at least 5 different elements to demonstrate: color, background color, font-size, border, and padding -->
 <body>
-    <header>
-        <h1>Contact Me</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home Page</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="skills.html">My Skills</a></li>
-            <li><a href="academic.html">My Academic Record</a></li>
-            <li><a href="projects.html">My Projects</a></li>
-            <li><a href="contact.html" class="active">My Contact</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Get In Touch</legend>
+	<header>
+		<h1>Contact Me</h1>
+	</header>
 
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Your full name" required maxlength="60">
+	<nav>
+		<ul>
+			<li><a href="index.html">Home Page</a></li>
+			<li><a href="about.html">About Me</a></li>
+			<li><a href="skills.html">My Skills</a></li>
+			<li><a href="academic.html" >My Academic Record</a></li>
+			<li><a href="projects.html">My Projects</a></li>
+			<li><a href="contact.html" class="active">My Contact</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		<div>
+			<!--Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping -->
+			<form action="#" method="post">
+				<fieldset>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required maxlength="60">
+					<legend>Get In Touch</legend>
 
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="012-3456789" required maxlength="12">
+					 <!--Every input must have a linked <label for="..."> — no placeholder-only labelling -->
+					 <!-- Include these input types: text, email, tel, number, date, range, and textarea-->
 
-                    <label for="age">Your Age:</label>
-                    <input type="number" id="age" name="age" required min="18" max="99">
+					<!--Name-->
+					<label for="fullname">Full Name:</label><br>
+					<input type="text" id="fullname" name="fullname" 
+					placeholder="Your full name" required maxlength="60"> <br><br>
 
-                    <label for="contactDate">Preferred Contact Date:</label>
-                    <input type="date" id="contactDate" name="contactDate" required>
+					<!--Email-->
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email" 
+					placeholder="example@email.com" required maxlength="60"> <br><br>
 
-                    <label for="urgency">Urgency Level (1-5):</label>
-                    <input type="range" id="urgency" name="urgency" required min="0" max="5">
+					<!--Phone-->
+					<label for="phone">Phone Number:</label><br>
+					<input type="tel" id="phone" name="phone" 
+					placeholder="012-3456789" required maxlength="12"> <br><br>
 
-                    <label for="message">Message to leave:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Leave your message here..." required></textarea>
-                </fieldset>
+					<!--Age-->
+					<label for="age">Your Age:</label><br>
+					<input type="number" id="age" name="age" 
+					required min="18" max="99"> <br><br>
 
-                <fieldset>
-                    <legend>Main Purpose to Contact</legend>
-                    <label for="subject">Subject:</label>
-                    <select id="subject" name="subject">
-                        <optgroup label="General">
-                            <option value="feedback">Feedback</option>
-                            <option value="question">Question</option>
-                        </optgroup>
-                        <optgroup label="Opportunities">
-                            <option value="sponsor">Sponsorship</option>
-                            <option value="hackathon">Hackathon Teammates</option>
-                            <option value="job">Job & Collaboration</option>
-                        </optgroup>
-                    </select>
-                </fieldset>
+					<!--Prefered Contact Date-->
+					<label for="contactDate">Prefered Contact Date:</label><br>
+					<input type="date" id="contactDate" name="contactDate" 
+					required> <br><br>
 
-                <fieldset>
-                    <legend>Preferred Contact Time & Method</legend>
-                    <p><strong>Choose your preferred contact methods:</strong></p>
-                    <input type="checkbox" id="contactEmail" name="contactMethod" value="contactEmail">
-                    <label for="contactEmail">Email</label><br>
-                    <input type="checkbox" id="contactPhone" name="contactMethod" value="contactPhone">
-                    <label for="contactPhone">Phone Call</label><br>
-                    <input type="checkbox" id="contactWhatsapp" name="contactMethod" value="contactWhatsapp">
-                    <label for="contactWhatsapp">Whatsapp Message</label><br><br>
+					<!--Urgency Level-->
+					<label for="urgency">Urgency Level (1-5):</label><br>
+					<input type="range" id="urgency" name="urgency" 
+					min="0" max="5"> <br><br>
 
-                    <p><strong>Choose your preferred contact time:</strong></p>
-                    <input type="radio" id="morning" name="contactTime" value="morning">
-                    <label for="morning">Morning</label><br>
-                    <input type="radio" id="afternoon" name="contactTime" value="afternoon">
-                    <label for="afternoon">Afternoon</label><br>
-                    <input type="radio" id="evening" name="contactTime" value="evening">
-                    <label for="evening">Evening</label><br>
-                </fieldset>
+					<!--Textarea Message-->
+					<label for="message">Message to leave:</label><br>
+					<textarea id="message" name="message" rows="5" cols="40" 
+					placeholder="Leave your message here..." required>
+					</textarea><br><br>
+				</fieldset>
 
-                <button type="submit">Submit Form</button>
-            </form>
-        </section>
-    </main>
 
-    <footer>
-        <address>Contact me: leemeishuet@graduate.utm.my</address>
-        <small>&copy; 2026 Meishuet's Portfolio. All rights reserved.</small>
-    </footer>
+				<!--Subject fieldset-->
+				<fieldset>
+					<legend>Main Purpose to Contact</legend>
+					<!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown -->
+					<label for="subject">Subject:</label><br>
+					<select id="subject" name="subject">
+						<optgroup label="General">
+							<option value="feedback">Feedback</option>
+							<option value="question">Question</option>
+						</optgroup>
+
+						<optgroup label="Opportunities">
+							<option value="sponsor">Sponsorship</option>
+							<option value="hackathon">Hackathon Teammates</option>
+							<option value="job">Job & Collaboration</option>
+						</optgroup>
+
+						<optgroup label="Others">
+							<option value="others">Others</option>
+						</optgroup>
+
+					</select>
+				</fieldset>
+
+
+				<!--Prefered Contact Time & Method Fieldset-->
+				<!--Add at least 3 checkboxes and 3 radio buttons with correct matching name attribute grouping-->
+				<!--Checkboxes,can choose more than 1-->
+				<fieldset>
+					<legend>Prefered Contact Time & Method</legend>
+
+					<p>Choose your preffered contact methods:</p>
+					<label for="contactEmail">Email</label>
+					<input type="checkbox" id="contactEmail" name="contactMethod" value="contactEmail"><br>
+
+					<label for="contactPhone">Phone Call</label>
+					<input type="checkbox" id="contactPhone" name="contactMethod" value="contactPhone"><br>
+
+					<label for="contactWhatsapp">Whatsapp Message</label>
+					<input type="checkbox" id="contactWhatsapp" name="contactMethod" value="contactWhatsapp"><br><br>
+
+				<!--Radio button,can choose onli 1-->
+				<p>Choose your preffered contact time:</p>
+				<label for="morning">Morning</label>
+				<input type="radio" id="morning" name="contactTime" value="morning"><br>
+
+				<label for="afternoon">Afternoon</label>
+				<input type="radio" id="afternoon" name="contactTime" value="afternoon"><br>
+
+				<label for="evening">Evening</label>
+				<input type="radio" id="evening" name="contactTime" value="evening"><br>
+
+				</fieldset>
+
+				<!--Submit Button-->
+				<button type="submit">Submit Form</button>
+
+			</form>
+		</div>
+	</main>
+
+	<footer>
+		<small>&copy; 2026 Meishuet's Portfolio. All rights reserved.</small>
+	</footer>
 </body>
 </html>
