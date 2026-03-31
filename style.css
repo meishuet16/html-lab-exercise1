@@ -215,8 +215,8 @@ header .hero-text {
 
 /* Profile image placeholder */
 header .hero-image {
-  flex: 0 0 200px; /* Fixed width for image */
-  height: 200px;
+  flex: 0 0 20rem; /* Fixed width for image */
+  height: 20rem;
   background-color: var(--color-grey2);
   border-radius: 50%; /* Circular placeholder */
 }
